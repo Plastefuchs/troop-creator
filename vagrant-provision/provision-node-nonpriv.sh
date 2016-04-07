@@ -16,3 +16,5 @@ export NVM_DIR="/home/vagrant/.nvm"
 nvm install $NODE_VERSION
 nvm alias default $NODE_VERSION
 
+# install global http-server
+npm install http-server -g

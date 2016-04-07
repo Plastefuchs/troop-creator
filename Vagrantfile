@@ -34,4 +34,9 @@ Vagrant.configure("2") do |config|
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant","1"]
   end
 
+
+  config.vm.network "forwarded_port", guest: 8000, host: 8080
+
+
+
 end
