@@ -46,3 +46,6 @@ then
 fi
 
 
+echo "==> Adding auto completion for npm"
+npm completion >> ~/.bashrc
+source ~/.bashrc
