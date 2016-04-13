@@ -16,7 +16,7 @@ ln -sf /opt/node/$NODE_VERSION/bin/node /usr/bin/node
 ln -sf /opt/node/$NODE_VERSION/bin/npm /usr/bin/npm
 
 # if we don't have nginx install, then install
-echo "==> Checking Nginx version $NGINX_VERSION installed"
+echo "==> Checking Nginx version $NGINX_VERSION installed";
 if [ ! -e /opt/nginx-$NGINX_VERSION ]
 then
 	echo "==> Installing Nginx $NGINX_VERSION";
@@ -46,6 +46,4 @@ then
 fi
 
 
-echo "==> Adding auto completion for npm"
-npm completion >> ~/.bashrc
-source ~/.bashrc
+

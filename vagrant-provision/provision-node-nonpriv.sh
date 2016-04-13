@@ -20,5 +20,5 @@ nvm install $NODE_VERSION
 nvm alias default $NODE_VERSION
 
 # install global http-server
-echo "==> Installing http-server into global";
-npm install http-server -g
+echo "==> Installing simplehttpserver into global";
+npm install simplehttpserver -g
