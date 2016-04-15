@@ -32,6 +32,7 @@ Vagrant.configure("2") do |config|
 
   # enable the creation of symlinks on the VirtualBox instance
   config.vm.provider "virtualbox" do |vb|
+    vb.memory = 1024
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant","1"]
   end
 end
