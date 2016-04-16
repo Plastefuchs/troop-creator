@@ -17,6 +17,7 @@ Vagrant.configure("2") do |config|
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   config.vm.network :private_network, ip: "192.168.33.10"
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
 
   # provision using the shell provisioner
   # config.vm.provision :shell do |shell|
@@ -31,12 +32,7 @@ Vagrant.configure("2") do |config|
 
   # enable the creation of symlinks on the VirtualBox instance
   config.vm.provider "virtualbox" do |vb|
+    vb.memory = 1024
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant","1"]
   end
-
-
-  config.vm.network "forwarded_port", guest: 8000, host: 8080
-
-
-
 end
